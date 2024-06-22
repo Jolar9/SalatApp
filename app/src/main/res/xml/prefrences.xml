@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:extras="http://schemas.android.com/tools">
+
+    <PreferenceCategory android:title="Prayer Times Calculations">
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="@string/manual"
+            android:summary="@string/manual_summary"
+            android:title="@string/manual_title" />
+
+        <ListPreference
+            android:defaultValue="@string/juristic_default"
+            android:dependency="@string/manual"
+            android:entries="@array/juristic_entries"
+            android:entryValues="@array/juristic_values"
+            android:key="juristic"
+            android:title="@string/juristic_title" />
+
+        <ListPreference
+            android:defaultValue="@string/calculation_default"
+            android:dependency="@string/manual"
+            android:entries="@array/calculation_entries"
+            android:entryValues="@array/calculation_values"
+            android:key="@string/calculation"
+            android:title="@string/calculation_title" />
+
+        <ListPreference
+            android:defaultValue="@string/latitude_default"
+            android:dependency="@string/manual"
+            android:entries="@array/latitude_entries"
+            android:entryValues="@array/latitude_values"
+            android:key="@string/latitude"
+            android:title="@string/latitude_title" />
+
+        <ListPreference
+            android:defaultValue="@string/time_default"
+            android:dependency="@string/manual"
+            android:entries="@array/time_entries"
+            android:entryValues="@array/time_values"
+            android:key="@string/time"
+            android:title="@string/time_title" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Silence Phone">
+<!--        <Preference-->
+<!--            android:defaultValue="0"-->
+<!--            android:key="silent"-->
+<!--            android:selectAllOnFocus="true"-->
+<!--            android:singleLine="true"-->
+<!--            android:summary="Choose the time in minutes to switch your phone to silent mode"-->
+<!--            android:title="Set the silent mode time" />-->
+        <Preference
+            android:key="silent"
+            android:title="Silent Mode"
+            android:summary="Select the duration for silent mode">
+
+        </Preference>
+
+    </PreferenceCategory>
+
+
+</PreferenceScreen>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/layout1"
+    tools:context=".Settings">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Toolbar with back button -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:title="Settings"
+            app:titleTextColor="@android:color/white"
+            app:navigationIcon="@drawable/baseline_arrow_back_ios_24" /> <!-- Set the navigation icon to the back arrow icon -->
+
+        <FrameLayout
+            android:id="@+id/fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <ToggleButton
+                android:id="@+id/toggleButton"
+                android:layout_width="307dp"
+                android:layout_height="242dp"
+                android:layout_marginStart="108dp"
+                android:layout_marginTop="20dp"
+                android:textOff="OFF"
+                android:textOn="ON" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
